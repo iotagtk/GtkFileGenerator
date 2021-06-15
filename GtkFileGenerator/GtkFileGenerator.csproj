@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="**\*.glade" />
+        <EmbeddedResource Include="**\*.glade">
+            <LogicalName>%(Filename)%(Extension)</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GtkSharp" Version="3.24.24.*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsArrayDic.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\ExtensionsClass\clsExtensionsObject.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsObject.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\ExtensionsClass\clsExtensionsDateTime.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsDateTime.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\ExtensionsClass\clsExtensionsString.cs">
+        <Link>core_commonclasses\ExtensionsClass\clsExtensionsString.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\File\clsFolder.cs">
+        <Link>core_commonclasses\File\clsFolder.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\File\clsEncodeFile.cs">
+        <Link>core_commonclasses\File\clsEncodeFile.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\File\clsFile+form.cs">
+        <Link>core_commonclasses\File\clsFile+form.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\File\clsFolder+static.cs">
+        <Link>core_commonclasses\File\clsFolder+static.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\File\clsFile+static.cs">
+        <Link>core_commonclasses\File\clsFile+static.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\Utility\clsUtility.cs">
+        <Link>core_commonclasses\Utility\clsUtility.cs</Link>
+      </Compile>
+      <Compile Update="core_commonclasses\Utility\clsClipboard.cs">
+        <Link>core_commonclasses\Utility\clsClipboard.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="MainWindow.cs" />
+      <Content Include="..\README.md">
+        <Link>README.md</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="classTemplate.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="gladeTemplate.txt" />
+      <Content Include="gladeTemplate.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
