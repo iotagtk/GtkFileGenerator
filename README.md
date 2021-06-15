@@ -16,6 +16,10 @@ https://github.com/GtkSharp/GtkSharp
 
 The templates can be installed from dotnet new.
 
+#### nuget gtkSharp
+
+https://www.nuget.org/packages/GtkSharp/
+
 ```
 $ dotnet new --install GtkSharp.Template.CSharp
 ```
