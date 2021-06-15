@@ -5,7 +5,7 @@ Template.
 It is convenient to use external tool registration in Rider.
 
 #### Usage
-
+- install GtkSharp.Template.CSharp
 - Copy and paste the class name.
 - Set the arguments to GtkFileGenerator
 - Run the GtkFileGenerator
