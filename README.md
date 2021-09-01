@@ -55,3 +55,7 @@ When you run the GtkFileGenerator, a class file based on the template file will 
 
 Modify classTemplate.txt and gladeTemplate.txt.
 
+#### If you cannot build 
+
+When importing with Rider, please re-set the file properties to Embeded resource.
+Or use AddItem to add it again.
