@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml;
 
@@ -24,6 +25,7 @@ namespace gladeGenerator
             "-projectName","-projectDir"};
         public Boolean _validateCommandKey()
         {
+   
             if (ProjectFolder == "" )
             {
                 Console.WriteLine("The projectFolder is not specified.");
@@ -33,6 +35,11 @@ namespace gladeGenerator
             {
                 Console.WriteLine("ProjectName is not specified.");
                 return false;
+            }
+            
+            if (ProjectName != "")
+            {
+                ProjectName = _getProjectName(ProjectName);
             }
 
             return true;
@@ -53,7 +60,7 @@ namespace gladeGenerator
                     i++;
                     continue;
                 }
-                
+
                 if (commandKey._indexOf("-projectName") != -1)
                 {
                     
@@ -70,7 +77,37 @@ namespace gladeGenerator
             }
         }
         
-  
-       
+        /// <summary>
+        /// プロジェクトパスを取得する
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        private string _getProjectName(string path)
+        {
+            path = path.TrimEnd(Path.DirectorySeparatorChar);
+
+            var separator = Path.DirectorySeparatorChar;
+            string[] pathArray = path.Split(separator);
+            
+            if (pathArray.Length == 0)
+            {
+                return path;
+            }
+
+            for (int i = pathArray.Length; i > 0; i--)
+            {
+                var pathArray1 = pathArray[0..i];
+                string stCsvData = string.Join("/", pathArray1);
+                string csprojPath = stCsvData + "/" + pathArray[i - 1] + ".csproj";
+                if (File.Exists(csprojPath))
+                {
+                    return pathArray[i - 1];
+                    break;
+                }
+            }
+            
+            return "";
+        }
+
     }
 }

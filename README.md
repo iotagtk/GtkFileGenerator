@@ -29,7 +29,7 @@ $ dotnet new --install GtkSharp.Template.CSharp
 Run from a terminal You can't use macros in a terminal, so you need to put the absolute path in the projectDir.
 
 ```
-$ GtkFileGenerator -projectName namespace name -projectDir projectPath
+$ GtkFileGenerator -projectName namespace -projectDir projectPath
 ```
 
 ##### Run from Rider macro can be used
@@ -42,7 +42,7 @@ Set the path of the program.
 Set the arguments.
 
 ```
--projectName $SolutionName$ -projectDir $FileDir$
+-projectName $FilePath$ -projectDir $FileDir$
 ```
 
 The working Path can be empty.

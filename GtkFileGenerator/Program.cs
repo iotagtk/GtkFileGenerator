@@ -27,9 +27,6 @@ namespace GtkFileGenerator
                 throw;
             }
 
-            //clsArgsConfig.Instance().ProjectFolder = "/home/ita/C#/App_GitHub/GtkFileGenerator/GtkFileGenerator";
-            //clsArgsConfig.Instance().ProjectName = "GtkFileGenerator";
-
             if (!clsArgsConfig.Instance()._validateCommandKey())
             {
                 return;
