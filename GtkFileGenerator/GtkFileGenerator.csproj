@@ -35,9 +35,6 @@
       <Compile Update="core_commonclasses\File\clsEncodeFile.cs">
         <Link>core_commonclasses\File\clsEncodeFile.cs</Link>
       </Compile>
-      <Compile Update="core_commonclasses\File\clsFile+form.cs">
-        <Link>core_commonclasses\File\clsFile+form.cs</Link>
-      </Compile>
       <Compile Update="core_commonclasses\File\clsFolder+static.cs">
         <Link>core_commonclasses\File\clsFolder+static.cs</Link>
       </Compile>
@@ -50,6 +47,7 @@
       <Compile Update="core_commonclasses\Utility\clsClipboard.cs">
         <Link>core_commonclasses\Utility\clsClipboard.cs</Link>
       </Compile>
+      <Compile Remove="core_commonclasses\File\clsFile+form.cs" />
     </ItemGroup>
 
     <ItemGroup>
