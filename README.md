@@ -59,3 +59,9 @@ Modify classTemplate.txt and gladeTemplate.txt.
 
 When importing with Rider, please re-set the file properties to Embeded resource.
 Or use AddItem to add it again.
+
+#### Use Rider for Free
+
+If you are an open source developer, you can use all JetBrains products for free!
+
+https://www.jetbrains.com/community/opensource
