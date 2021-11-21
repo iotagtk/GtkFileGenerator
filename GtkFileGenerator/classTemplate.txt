@@ -14,8 +14,8 @@ namespace {$ProjectName}
         private {$className}(Builder builder) : base(builder.GetRawOwnedObject("{$className}"))
         {
             builder.Autoconnect(this);
-
-        }
+            DeleteEvent += Window_DeleteEvent;
+        }                
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
         {
