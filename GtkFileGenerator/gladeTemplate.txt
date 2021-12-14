@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.18"/>
   <object class="GtkWindow" id="{$className}">
@@ -7,14 +8,12 @@
     <property name="default_width">480</property>
     <property name="default_height">240</property>
     <child>
-      <object class="GtkBox">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkLayout">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="margin_left">4</property>
-        <property name="margin_right">4</property>
-        <property name="margin_top">4</property>
-        <property name="margin_bottom">4</property>
-        <property name="orientation">vertical</property>
       </object>
     </child>
   </object>
